@@ -14,13 +14,11 @@ schema = ["id", "name", "age"]
 df = spark.createDataFrame(data, schema=schema)
 hashtag
 
-hashtag#dropping
+#dropping
 df_no_nulls = df.dropna()
 df_no_nulls.show()
 
-hashtag
-
-hashtag#filling
+#filling
 df_filled = df.fillna(0, subset=["age"])
 df_filled.show()
 
